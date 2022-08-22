@@ -1,6 +1,3 @@
-from audioop import reverse
-
-
 def topKFrequent(nums, k):
     num_dic = {}
     ans = []
@@ -11,9 +8,9 @@ def topKFrequent(nums, k):
             num_dic[num] = 1
 
     # sorting..
-    sortedNum_Dic = sorted(num_dic.items(), key=lambda x: x[1], reverse=True)
+    sorted_num_dic = sorted(num_dic.items(), key=lambda x: x[1], reverse=True)
 
-    return print([x[0] for x in sortedNum_Dic[:k]])
+    return print([x[0] for x in sorted_num_dic[:k]])
 
 
 topKFrequent([1, 1, 1, 2, 3, 2], 2)
