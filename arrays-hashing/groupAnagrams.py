@@ -2,19 +2,23 @@ from collections import defaultdict
 
 
 def groupAnagrams(strs):
-    #  default dic
+    # default dic
     # it provides a default value
     # for the key that does not exists
-    res = defaultdict(list)
+    # O(n)
+
+    # we are saving what chars the string has equal each other and how many of them too.
+    ans = defaultdict(list)
 
     count = []
     for s in strs:
         count = [0] * 26  # a ... z
         for c in s:
             count[ord(c) - ord('a')] += 1
-        res[tuple(count)].append(s)
+            # list are unhashable, cannot be 'key', 'cause they're mutable
+        ans[tuple(count)].append(s)
 
-    return res.values()
+    print(ans.values())
 
     # O(mnlogn)
     # m -> strs' length
@@ -29,4 +33,4 @@ def groupAnagrams(strs):
     # return hashmap.values()
 
 
-print(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+print(groupAnagrams(["eae", "aea", "tan", "ate", "nat", "bat"]))

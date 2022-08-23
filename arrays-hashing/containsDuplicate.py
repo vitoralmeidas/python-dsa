@@ -1,10 +1,8 @@
 def containsDuplicates(nums) -> bool:
+    hashset = set()
 
-    return len(set(nums)) != len(nums)
-
-    hashSet = set()
-    for num in hashSet:
-        if num in hashSet:
-            return True
-        hashSet.add(num)
-    return False
+    for num in nums:
+        if num in hashset:
+            return False
+        hashset.add(num)
+    return True
