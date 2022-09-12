@@ -95,5 +95,3 @@ class Tree:
         print(node.val)
         self.traverse_pre_order_node(node.left)
         self.traverse_pre_order_node(node.right)
-
-    def traverse_post_order(self):
