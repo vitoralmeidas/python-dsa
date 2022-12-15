@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def isAnagram(s, t):
-    #  using a libary
+    #    using a libary
     return Counter(s) == Counter(t)
 
     # easier to understand
@@ -25,7 +25,6 @@ def isAnagram(s, t):
             return False
 
     return True
-
     # slower...
     return sorted(s) == sorted(t)
 
