@@ -1,3 +1,5 @@
+from collections import Counter
+
 """
 Input: text = "nlaebolko"
 Output: 1
@@ -8,9 +10,6 @@ Output: 2
 Input: text = "leetcode"
 Output: 0
 """
-
-
-from collections import Counter
 
 
 def maxNumberOfBalloons(text: str):
