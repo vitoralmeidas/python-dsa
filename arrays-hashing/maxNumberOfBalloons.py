@@ -26,7 +26,8 @@ def maxNumberOfBalloons(text: str):
     # because of that we are looking for the min
     # we need a big number to compare it, because our value (big number) wont be replaced
 
-    res = len(text)  # or float = ("inf")
+    # + Infinity = float("inf") -> min  // - Infinity =  float("-inf") -> max
+    res = len(text)
 
     for c in ballon:
         res = min(res, countText[c] // ballon[c])
